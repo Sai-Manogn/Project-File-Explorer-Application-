@@ -17,20 +17,21 @@ This File Explorer Application is a versatile tool designed to manage files and 
 
 ## Installation
 
-**1. Clone the Repository:**
+ 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/yourusername/file-explorer.git
 
-**2. Navigate to the Project Directory:**
+2. Navigate to the Project Directory:
    cd file-explorer
-**3. Build the Project:**
+3. Build the Project:
    Using a C++ compiler, compile the source files.
    g++ -o file_explorer main.cpp FileSystem.cpp DirectoryManager.cpp FileManager.cpp SearchManager.cpp PermissionManager.cpp CommandProcessor.cpp Logger.cpp
-**4. Run the Application:**
+4. Run the Application:
    ./file_explorer
 
-**Features**
-**File Navigation:**
+Features
+
+File Navigation:
 
 Browse directories and view the contents.
 
@@ -38,7 +39,7 @@ Move up and down the directory tree.
 
 Change the current working directory.
 
-**File Operations:**
+File Operations:
 
 Create, delete, rename, and move files and directories.
 
@@ -46,51 +47,51 @@ Copy files from one location to another.
 
 View file properties (e.g., size, permissions, modification date).
 
-**Search Functionality:**
+Search Functionality:
 
 Search for files or directories by name or other attributes.
 
 Use wildcards or regular expressions for advanced searches.
 
-**File Viewing:**
+File Viewing:
 
 Display the contents of a file directly in the terminal (e.g., using cat, less, or custom implementation).
 
 Open files with appropriate applications (e.g., text files in a text editor).
 
-**Permission Management:**
+Permission Management:
 
 View and modify file permissions (read, write, execute).
 
 Change ownership of files (if running as a superuser).
 
-**Command Execution:**
+Command Execution:
 
 Allow users to execute shell commands directly within the application.
 
 Integrate with other system tools or utilities.
 
-**Architecture**
+Architecture
 
 The application is organized into several key classes, each responsible for specific functionality:
 
-**FileSystem:** Central class managing overall file system operations.
+FileSystem: Central class managing overall file system operations.
 
-**DirectoryManager:** Handles directory-related tasks like creating, deleting, and navigating directories.
+DirectoryManager: Handles directory-related tasks like creating, deleting, and navigating directories.
 
-**FileManager:** Manages file-specific operations including copying, moving, deleting, and creating files.
+FileManager: Manages file-specific operations including copying, moving, deleting, and creating files.
 
-**SearchManager:** Provides the ability to search files by name or content.
+SearchManager: Provides the ability to search files by name or content.
 
-**PermissionManager:** Manages and enforces user permissions for file and directory access.
+PermissionManager: Manages and enforces user permissions for file and directory access.
 
-**CommandProcessor:** Interprets and executes user commands.
+CommandProcessor: Interprets and executes user commands.
 
-**Logger:** Records all significant actions within the application to a log file.
+Logger: Records all significant actions within the application to a log file.
 
-**Usage**
-**Code**:
-**FileManager.hpp:**
+Usage
+Code:
+FileManager.hpp:
 // FileManager.hpp
 #ifndef FILE_MANAGER_HPP
 #define FILE_MANAGER_HPP
@@ -116,7 +117,7 @@ private:
 #endif // FILE_MANAGER_HPP
 
 
-**FileManager.cpp**
+FileManager.cpp
 #include "FileManager.hpp"
 #include <iostream>
 #include <filesystem>
@@ -259,7 +260,7 @@ void FileManager::logOperation(const std::string &operation, const std::string &
     }
 }
 
-**main.cpp:**
+main.cpp:
 // main.cpp
 #include "FileManager.hpp"
 #include <iostream>
@@ -275,13 +276,13 @@ int main() {
     return 0;
 }
 
-**Sample run:**
+Sample run:
 
 Output
 ![image](https://github.com/user-attachments/assets/4ed2e5df-4b44-45ee-8c45-63195f1ef467)
 
 
-**Contributing**
+Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -293,13 +294,13 @@ Contributions are welcome! Please follow these steps:
 
 4. Submit a pull request for review.
 
-**License**
+License
 
-This '**File exploring Application**' project is licensed under the our group. See the LICENSE file for details.
+This 'File exploring Application' project is licensed under the our group. See the LICENSE file for details.
 
 
-**References**
+References
 
-**Google:** For general research and problem-solving.
-**YouTube:** For tutorials and visual learning.
-**Training:** Formal and informal training resources.
+Google: For general research and problem-solving.
+YouTube: For tutorials and visual learning.
+Training: Formal and informal training resources.
