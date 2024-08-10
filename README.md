@@ -297,17 +297,17 @@ void FileManager::createFile() {
     
  std::ofstream ofs(filePath);
     
-    if (ofs) {
+ if (ofs) {
     
-     ofs.close();
+ ofs.close();
         
-     std::cout << "File created successfully.\n";
+ std::cout << "File created successfully.\n";
         
-     logOperation("Create", filePath); // Log after success
+ logOperation("Create", filePath); // Log after success
     
-    } else {
+ } else {
     
-     std::cerr << "Error creating file: Could not open file.\n";
+    std::cerr << "Error creating file: Could not open file.\n";
     
     }
 
@@ -321,11 +321,11 @@ void FileManager::searchFile() {
     
  for (const auto &entry : std::filesystem::recursive_directory_iterator(directory)) {
     
-     if (entry.path().filename().string().find(criteria) != std::string::npos) {
+    if (entry.path().filename().string().find(criteria) != std::string::npos) {
         
-         std::cout << "Found: " << entry.path() << '\n';
+     std::cout << "Found: " << entry.path() << '\n';
         
-        }
+    }
     
     }
     
@@ -425,7 +425,7 @@ void FileManager::logOperation(const std::string &operation, const std::string &
     
   oss << "[" << std::put_time(std::localtime(&now_c), "%Y-%m-%d %H:%M:%S") << "] " <<
      
-    operation << ": " << details << '\n';
+ operation << ": " << details << '\n';
     
  std::string logMessage = oss.str();
     
@@ -445,7 +445,7 @@ std::ofstream logFile("file_manager.log", std::ios::app);
     
   } else {
     
-    std::cerr << "Error: Could not open log file.\n";
+  std::cerr << "Error: Could not open log file.\n";
     
  }
 
