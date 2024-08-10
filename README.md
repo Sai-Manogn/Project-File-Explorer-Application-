@@ -273,15 +273,15 @@ void FileManager::copyFile() {
 
 void FileManager::deleteFile() {
 
-  std::string filePath = getFilePath("Enter file path to delete: ");
+ std::string filePath = getFilePath("Enter file path to delete: ");
     
- try {
+try {
     
-    std::filesystem::remove(filePath);
+ std::filesystem::remove(filePath);
         
-    std::cout << "File deleted successfully.\n";
+ std::cout << "File deleted successfully.\n";
         
-    logOperation("Delete", filePath); // Log after success
+ logOperation("Delete", filePath); // Log after success
     
  } catch (const std::filesystem::filesystem_error &e) {
     
@@ -357,7 +357,7 @@ void FileManager::managePermissions() {
     
     } catch (const std::filesystem::filesystem_error &e) {
     
-      std::cerr << "Error managing permissions: " << e.what() << '\n';
+     std::cerr << "Error managing permissions: " << e.what() << '\n';
     
     }
 
@@ -425,7 +425,7 @@ void FileManager::logOperation(const std::string &operation, const std::string &
     
   oss << "[" << std::put_time(std::localtime(&now_c), "%Y-%m-%d %H:%M:%S") << "] " <<
      
-     operation << ": " << details << '\n';
+    operation << ": " << details << '\n';
     
  std::string logMessage = oss.str();
     
@@ -445,9 +445,9 @@ std::ofstream logFile("file_manager.log", std::ios::app);
     
   } else {
     
-     std::cerr << "Error: Could not open log file.\n";
+    std::cerr << "Error: Could not open log file.\n";
     
-    }
+ }
 
 }
 
