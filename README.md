@@ -139,19 +139,19 @@ public:
 
 private:
     
-void moveFile();
+ void moveFile();
      
-void copyFile();
+ void copyFile();
     
-    void deleteFile();
+ void deleteFile();
     
-    void createFile();
+ void createFile();
     
-    void searchFile();
+ void searchFile();
     
-    void managePermissions();
+  void managePermissions();
     
-    // Helper functions to get input from the user
+ // Helper functions to get input from the user
     
     std::string getFilePath(const std::string &prompt);
     
