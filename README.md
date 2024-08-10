@@ -138,6 +138,7 @@ public:
    void handleUserChoice(int choice);
 
 private:
+     
      void moveFile();
      
      void copyFile();
@@ -161,8 +162,8 @@ private:
     std::string getPermissions();
     
     void logOperation(const std::string &operation, const std::string &details);
-
-};
+    
+    };
 
 #endif // FILE_MANAGER_HPP
     
