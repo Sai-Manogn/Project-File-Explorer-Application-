@@ -238,6 +238,8 @@ int main() {
     }
     return 0;
 }
+
+
 **Sample Run**
 Output
 ![image](https://github.com/user-attachments/assets/4ed2e5df-4b44-45ee-8c45-63195f1ef467)
