@@ -307,9 +307,9 @@ void FileManager::createFile() {
     
  } else {
     
-    std::cerr << "Error creating file: Could not open file.\n";
+ std::cerr << "Error creating file: Could not open file.\n";
     
-    }
+ }
 
 }
 
@@ -321,11 +321,11 @@ void FileManager::searchFile() {
     
  for (const auto &entry : std::filesystem::recursive_directory_iterator(directory)) {
     
-    if (entry.path().filename().string().find(criteria) != std::string::npos) {
+ if (entry.path().filename().string().find(criteria) != std::string::npos) {
         
-     std::cout << "Found: " << entry.path() << '\n';
+    std::cout << "Found: " << entry.path() << '\n';
         
-    }
+  }
     
     }
     
@@ -339,27 +339,27 @@ void FileManager::managePermissions() {
     
  std::string permissions = getPermissions();
     
-    try {
+ try {
     
-        // Convert string permissions to std::filesystem::perms here
+    // Convert string permissions to std::filesystem::perms here
         
-     std::filesystem::permissions(filePath,
+    std::filesystem::permissions(filePath,
         
-                                     std::filesystem::perms::owner_all | 
+                                    std::filesystem::perms::owner_all | 
                                      
-                                     std::filesystem::perms::group_all | 
+                                    std::filesystem::perms::group_all | 
                                      
-                                     std::filesystem::perms::others_all);
+                                 std::filesystem::perms::others_all);
         
-        std::cout << "Permissions modified successfully.\n";
+    std::cout << "Permissions modified successfully.\n";
         
-        logOperation("ManagePermissions", filePath + " -> " + permissions); // Log after success
+    logOperation("ManagePermissions", filePath + " -> " + permissions); // Log after success
     
-    } catch (const std::filesystem::filesystem_error &e) {
+ } catch (const std::filesystem::filesystem_error &e) {
     
-     std::cerr << "Error managing permissions: " << e.what() << '\n';
+    std::cerr << "Error managing permissions: " << e.what() << '\n';
     
-    }
+ }
 
 }
 
