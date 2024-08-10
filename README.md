@@ -141,7 +141,7 @@ private:
     
     void moveFile();
      
-     void copyFile();
+    void copyFile();
     
     void deleteFile();
     
