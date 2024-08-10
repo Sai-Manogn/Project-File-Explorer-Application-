@@ -138,10 +138,9 @@ public:
    void handleUserChoice(int choice);
 
 private:
-    
-    void moveFile();
-    
-    void copyFile();
+     void moveFile();
+     
+     void copyFile();
     
     void deleteFile();
     
