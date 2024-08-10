@@ -267,7 +267,7 @@ void FileManager::copyFile() {
     
     std::cerr << "Error copying file: " << e.what() << '\n';
     
-    }
+ }
 
 }
 
@@ -365,49 +365,49 @@ void FileManager::managePermissions() {
 
 std::string FileManager::getFilePath(const std::string &prompt) {
 
-    std::string path;
+ std::string path;
     
-    std::cout << prompt;
+ std::cout << prompt;
     
-    std::cin >> path;
+ std::cin >> path;
     
-    return path;
+ return path;
 
 }
 
 std::string FileManager::getSearchCriteria() {
 
-    std::string criteria;
+ std::string criteria;
     
-    std::cout << "Enter search criteria: ";
+ std::cout << "Enter search criteria: ";
     
-    std::cin >> criteria;
+ std::cin >> criteria;
     
-    return criteria;
+ return criteria;
 
 }
 
 std::string FileManager::getDirectory() {
 
-    std::string directory;
+ std::string directory;
     
-    std::cout << "Enter directory to search in: ";
+ std::cout << "Enter directory to search in: ";
     
-    std::cin >> directory;
+ std::cin >> directory;
     
-    return directory;
+ return directory;
 
 }
 
 std::string FileManager::getPermissions() {
 
-    std::string permissions;
+ std::string permissions;
     
-    std::cout << "Enter new permissions (e.g., rwxrwxrwx): ";
+ std::cout << "Enter new permissions (e.g., rwxrwxrwx): ";
     
-    std::cin >> permissions;
+ std::cin >> permissions;
     
-    return permissions;
+ return permissions;
 
 }
 
@@ -425,7 +425,7 @@ void FileManager::logOperation(const std::string &operation, const std::string &
     
   oss << "[" << std::put_time(std::localtime(&now_c), "%Y-%m-%d %H:%M:%S") << "] " <<
      
-           operation << ": " << details << '\n';
+        operation << ": " << details << '\n';
     
  std::string logMessage = oss.str();
     
