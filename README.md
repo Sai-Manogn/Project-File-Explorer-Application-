@@ -20,10 +20,10 @@ This File Explorer Application is a versatile tool designed to manage files and 
 •Usage
 
     
-    *Code
+  *Code
     
     
-    *Sample Run
+  *Sample Run
 
 •Contributing
 
@@ -86,15 +86,15 @@ Open files with appropriate applications (e.g., text files in a text editor).
 
 **Permission Management**
 
-View and modify file permissions (read, write, execute).
+•View and modify file permissions (read, write, execute).
 
-Change ownership of files (if running as a superuser).
+•Change ownership of files (if running as a superuser).
 
 **Command Execution**
 
-Allow users to execute shell commands directly within the application.
+•Allow users to execute shell commands directly within the application.
 
-Integrate with other system tools or utilities.
+•Integrate with other system tools or utilities.
 
 # Architecture
 
@@ -345,11 +345,11 @@ void FileManager::managePermissions() {
         
  std::filesystem::permissions(filePath,
         
-                                std::filesystem::perms::owner_all | 
+                            std::filesystem::perms::owner_all | 
                                      
-                                std::filesystem::perms::group_all | 
+                            std::filesystem::perms::group_all | 
                                      
-                                std::filesystem::perms::others_all);
+                             std::filesystem::perms::others_all);
         
  std::cout << "Permissions modified successfully.\n";
         
