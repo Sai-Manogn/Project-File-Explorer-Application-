@@ -186,31 +186,31 @@ private:
 
 void FileManager::displayMenu() {
 
-    std::cout << "Available operations:\n";
+ std::cout << "Available operations:\n";
     
-    std::cout << "1. Move file\n";
+ std::cout << "1. Move file\n";
     
-    std::cout << "2. Copy file\n";
+ std::cout << "2. Copy file\n";
     
-    std::cout << "3. Delete file\n";
+ std::cout << "3. Delete file\n";
     
-    std::cout << "4. Create file\n";
+ std::cout << "4. Create file\n";
     
-    std::cout << "5. Search file\n";
+ std::cout << "5. Search file\n";
     
-    std::cout << "6. Manage file permissions\n";
+ std::cout << "6. Manage file permissions\n";
     
-    std::cout << "7. Exit\n";
+ std::cout << "7. Exit\n";
 
 }
 
 void FileManager::handleUserChoice(int choice) {
 
-    switch (choice) {
+ switch (choice) {
     
-    case 1: moveFile(); break;
+   case 1: moveFile(); break;
     
-    case 2: copyFile(); break;
+   case 2: copyFile(); break;
     
     case 3: deleteFile(); break;
     
@@ -229,21 +229,21 @@ void FileManager::handleUserChoice(int choice) {
 
 void FileManager::moveFile() {
 
-    std::string source = getFilePath("Enter source file path: ");
+   std::string source = getFilePath("Enter source file path: ");
     
     std::string destination = getFilePath("Enter destination file path: ");
     
     try {
     
-        std::filesystem::rename(source, destination);
+     std::filesystem::rename(source, destination);
         
-        std::cout << "File moved successfully.\n";
+     std::cout << "File moved successfully.\n";
         
-        logOperation("Move", source + " -> " + destination); // Log after success
+     logOperation("Move", source + " -> " + destination); // Log after success
     
     } catch (const std::filesystem::filesystem_error &e) {
     
-        std::cerr << "Error moving file: " << e.what() << '\n';
+      std::cerr << "Error moving file: " << e.what() << '\n';
     
     }
 
@@ -251,21 +251,21 @@ void FileManager::moveFile() {
 
 void FileManager::copyFile() {
 
-    std::string source = getFilePath("Enter source file path: ");
+ std::string source = getFilePath("Enter source file path: ");
     
-    std::string destination = getFilePath("Enter destination file path: ");
+ std::string destination = getFilePath("Enter destination file path: ");
     
     try {
     
-        std::filesystem::copy(source, destination);
+      std::filesystem::copy(source, destination);
         
-        std::cout << "File copied successfully.\n";
+      std::cout << "File copied successfully.\n";
         
-        logOperation("Copy", source + " -> " + destination); // Log after success
+       logOperation("Copy", source + " -> " + destination); // Log after success
     
     } catch (const std::filesystem::filesystem_error &e) {
     
-        std::cerr << "Error copying file: " << e.what() << '\n';
+     std::cerr << "Error copying file: " << e.what() << '\n';
     
     }
 
@@ -273,19 +273,19 @@ void FileManager::copyFile() {
 
 void FileManager::deleteFile() {
 
-    std::string filePath = getFilePath("Enter file path to delete: ");
+  std::string filePath = getFilePath("Enter file path to delete: ");
     
     try {
     
-        std::filesystem::remove(filePath);
+     std::filesystem::remove(filePath);
         
-        std::cout << "File deleted successfully.\n";
+     std::cout << "File deleted successfully.\n";
         
-        logOperation("Delete", filePath); // Log after success
+     logOperation("Delete", filePath); // Log after success
     
     } catch (const std::filesystem::filesystem_error &e) {
     
-        std::cerr << "Error deleting file: " << e.what() << '\n';
+     std::cerr << "Error deleting file: " << e.what() << '\n';
     
     }
 
@@ -293,21 +293,21 @@ void FileManager::deleteFile() {
 
 void FileManager::createFile() {
 
-    std::string filePath = getFilePath("Enter file path to create: ");
+  std::string filePath = getFilePath("Enter file path to create: ");
     
-    std::ofstream ofs(filePath);
+ std::ofstream ofs(filePath);
     
     if (ofs) {
     
-        ofs.close();
+     ofs.close();
         
-        std::cout << "File created successfully.\n";
+     std::cout << "File created successfully.\n";
         
-        logOperation("Create", filePath); // Log after success
+     logOperation("Create", filePath); // Log after success
     
     } else {
     
-        std::cerr << "Error creating file: Could not open file.\n";
+     std::cerr << "Error creating file: Could not open file.\n";
     
     }
 
@@ -315,35 +315,35 @@ void FileManager::createFile() {
 
 void FileManager::searchFile() {
 
-    std::string criteria = getSearchCriteria();
+  std::string criteria = getSearchCriteria();
     
-    std::string directory = getDirectory();
+ std::string directory = getDirectory();
     
-    for (const auto &entry : std::filesystem::recursive_directory_iterator(directory)) {
+ for (const auto &entry : std::filesystem::recursive_directory_iterator(directory)) {
     
-        if (entry.path().filename().string().find(criteria) != std::string::npos) {
+     if (entry.path().filename().string().find(criteria) != std::string::npos) {
         
-            std::cout << "Found: " << entry.path() << '\n';
+         std::cout << "Found: " << entry.path() << '\n';
         
         }
     
     }
     
-    logOperation("Search", criteria + " in " + directory); // Log after search
+ logOperation("Search", criteria + " in " + directory); // Log after search
 
 }
 
 void FileManager::managePermissions() {
 
-    std::string filePath = getFilePath("Enter file or directory path: ");
+ std::string filePath = getFilePath("Enter file or directory path: ");
     
-    std::string permissions = getPermissions();
+ std::string permissions = getPermissions();
     
     try {
     
         // Convert string permissions to std::filesystem::perms here
         
-        std::filesystem::permissions(filePath,
+     std::filesystem::permissions(filePath,
         
                                      std::filesystem::perms::owner_all | 
                                      
@@ -357,7 +357,7 @@ void FileManager::managePermissions() {
     
     } catch (const std::filesystem::filesystem_error &e) {
     
-        std::cerr << "Error managing permissions: " << e.what() << '\n';
+      std::cerr << "Error managing permissions: " << e.what() << '\n';
     
     }
 
