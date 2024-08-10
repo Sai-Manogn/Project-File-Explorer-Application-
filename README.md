@@ -224,7 +224,7 @@ void FileManager::handleUserChoice(int choice) {
     
    default: std::cout << "Invalid choice. Please try again.\n";
     
-    }
+ }
 }
 
 void FileManager::moveFile() {
@@ -239,7 +239,7 @@ void FileManager::moveFile() {
         
   std::cout << "File moved successfully.\n";
         
-   logOperation("Move", source + " -> " + destination); // Log after success
+  logOperation("Move", source + " -> " + destination); // Log after success
     
  } catch (const std::filesystem::filesystem_error &e) {
     
@@ -259,9 +259,9 @@ void FileManager::copyFile() {
     
   std::filesystem::copy(source, destination);
         
-   std::cout << "File copied successfully.\n";
+  std::cout << "File copied successfully.\n";
         
-    logOperation("Copy", source + " -> " + destination); // Log after success
+   logOperation("Copy", source + " -> " + destination); // Log after success
     
   } catch (const std::filesystem::filesystem_error &e) {
     
@@ -413,35 +413,35 @@ std::string FileManager::getPermissions() {
 
 void FileManager::logOperation(const std::string &operation, const std::string &details) {
 
-    // Get the current time
+ // Get the current time
     
-    auto now = std::chrono::system_clock::now();
+ auto now = std::chrono::system_clock::now();
     
-    std::time_t now_c = std::chrono::system_clock::to_time_t(now);
+ std::time_t now_c = std::chrono::system_clock::to_time_t(now);
     
-    // Create a string stream to format the log message
+  // Create a string stream to format the log message
     
-    std::ostringstream oss;
+  std::ostringstream oss;
     
-     oss << "[" << std::put_time(std::localtime(&now_c), "%Y-%m-%d %H:%M:%S") << "] " <<
+  oss << "[" << std::put_time(std::localtime(&now_c), "%Y-%m-%d %H:%M:%S") << "] " <<
      
            operation << ": " << details << '\n';
     
-    std::string logMessage = oss.str();
+ std::string logMessage = oss.str();
     
-    // Print log message to console
+// Print log message to console
     
-    std::cout << logMessage;
+std::cout << logMessage;
     
-    // Open the log file
+// Open the log file
     
-    std::ofstream logFile("file_manager.log", std::ios::app);
+std::ofstream logFile("file_manager.log", std::ios::app);
     
-    if (logFile) {
+ if (logFile) {
     
-        // Write the log message to the file
+    // Write the log message to the file
         
-        logFile << logMessage;
+     logFile << logMessage;
     
     } else {
     
@@ -469,13 +469,13 @@ int main() {
     
  while (choice != 7) {
     
-    fm.displayMenu();
+ fm.displayMenu();
         
-    std::cout << "Enter your choice: ";
+ std::cout << "Enter your choice: ";
         
-    std::cin >> choice;
+ std::cin >> choice;
         
-    fm.handleUserChoice(choice);
+ fm.handleUserChoice(choice);
     
  }
     
