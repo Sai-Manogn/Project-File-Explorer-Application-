@@ -58,31 +58,31 @@ Using a C++ compiler, compile the source files.
 
 **File Navigation**
 
-Browse directories and view their contents.
+•Browse directories and view their contents.
 
-Move up and down the directory tree.
+•Move up and down the directory tree.
 
-Change the current working directory.
+•Change the current working directory.
 
 **File Operations**
 
-Create, delete, rename, and move files and directories.
+•Create, delete, rename, and move files and directories.
 
-Copy files from one location to another.
+•Copy files from one location to another.
 
-View file properties (e.g., size, permissions, modification date).
+•View file properties (e.g., size, permissions, modification date).
 
 **Search Functionality**
 
-Search for files or directories by name or other attributes.
+•Search for files or directories by name or other attributes.
 
-Use wildcards or regular expressions for advanced searches.
+•Use wildcards or regular expressions for advanced searches.
 
 **File Viewing**
 
-Display the contents of a file directly in the terminal (e.g., using cat, less, or custom implementation).
+•Display the contents of a file directly in the terminal (e.g., using cat, less, or custom implementation).
 
-Open files with appropriate applications (e.g., text files in a text editor).
+•Open files with appropriate applications (e.g., text files in a text editor).
 
 **Permission Management**
 
@@ -345,11 +345,11 @@ void FileManager::managePermissions() {
         
  std::filesystem::permissions(filePath,
         
-                            std::filesystem::perms::owner_all | 
+                std::filesystem::perms::owner_all | 
                                      
-                            std::filesystem::perms::group_all | 
+                 std::filesystem::perms::group_all | 
                                      
-                             std::filesystem::perms::others_all);
+                 std::filesystem::perms::others_all);
         
  std::cout << "Permissions modified successfully.\n";
         
