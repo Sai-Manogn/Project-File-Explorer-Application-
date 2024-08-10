@@ -265,7 +265,7 @@ void FileManager::copyFile() {
     
   } catch (const std::filesystem::filesystem_error &e) {
     
-    std::cerr << "Error copying file: " << e.what() << '\n';
+  std::cerr << "Error copying file: " << e.what() << '\n';
     
  }
 
@@ -285,15 +285,15 @@ void FileManager::deleteFile() {
     
  } catch (const std::filesystem::filesystem_error &e) {
     
-    std::cerr << "Error deleting file: " << e.what() << '\n';
+  std::cerr << "Error deleting file: " << e.what() << '\n';
     
-  }
+ }
 
 }
 
 void FileManager::createFile() {
 
-  std::string filePath = getFilePath("Enter file path to create: ");
+ std::string filePath = getFilePath("Enter file path to create: ");
     
  std::ofstream ofs(filePath);
     
@@ -315,7 +315,7 @@ void FileManager::createFile() {
 
 void FileManager::searchFile() {
 
-  std::string criteria = getSearchCriteria();
+ std::string criteria = getSearchCriteria();
     
  std::string directory = getDirectory();
     
@@ -425,7 +425,7 @@ void FileManager::logOperation(const std::string &operation, const std::string &
     
   oss << "[" << std::put_time(std::localtime(&now_c), "%Y-%m-%d %H:%M:%S") << "] " <<
      
-        operation << ": " << details << '\n';
+     operation << ": " << details << '\n';
     
  std::string logMessage = oss.str();
     
@@ -439,13 +439,13 @@ std::ofstream logFile("file_manager.log", std::ios::app);
     
  if (logFile) {
     
-    // Write the log message to the file
+ // Write the log message to the file
         
-     logFile << logMessage;
+  logFile << logMessage;
     
-    } else {
+  } else {
     
-        std::cerr << "Error: Could not open log file.\n";
+     std::cerr << "Error: Could not open log file.\n";
     
     }
 
