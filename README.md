@@ -245,7 +245,7 @@ void FileManager::moveFile() {
     
    std::cerr << "Error moving file: " << e.what() << '\n';
     
-    }
+ }
 
 }
 
@@ -275,19 +275,19 @@ void FileManager::deleteFile() {
 
   std::string filePath = getFilePath("Enter file path to delete: ");
     
-    try {
+ try {
     
-     std::filesystem::remove(filePath);
+    std::filesystem::remove(filePath);
         
-     std::cout << "File deleted successfully.\n";
+    std::cout << "File deleted successfully.\n";
         
-     logOperation("Delete", filePath); // Log after success
+    logOperation("Delete", filePath); // Log after success
     
-    } catch (const std::filesystem::filesystem_error &e) {
+ } catch (const std::filesystem::filesystem_error &e) {
     
-     std::cerr << "Error deleting file: " << e.what() << '\n';
+    std::cerr << "Error deleting file: " << e.what() << '\n';
     
-    }
+  }
 
 }
 
