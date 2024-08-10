@@ -132,7 +132,9 @@ The application is organized into several key classes, each responsible for spec
 class FileManager {
 
 public:
+
    void displayMenu();
+   
    void handleUserChoice(int choice);
 
 private:
