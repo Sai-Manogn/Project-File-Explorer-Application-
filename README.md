@@ -225,7 +225,6 @@ void FileManager::handleUserChoice(int choice) {
     default: std::cout << "Invalid choice. Please try again.\n";
     
     }
-
 }
 
 void FileManager::moveFile() {
