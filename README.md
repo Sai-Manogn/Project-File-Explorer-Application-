@@ -212,15 +212,15 @@ void FileManager::handleUserChoice(int choice) {
     
    case 2: copyFile(); break;
     
-    case 3: deleteFile(); break;
+   case 3: deleteFile(); break;
     
-    case 4: createFile(); break;
+   case 4: createFile(); break;
     
-    case 5: searchFile(); break;
+   case 5: searchFile(); break;
     
-    case 6: managePermissions(); break;
+   case 6: managePermissions(); break;
     
-    case 7: std::cout << "Exit\n"; break;
+   case 7: std::cout << "Exit\n"; break;
     
     default: std::cout << "Invalid choice. Please try again.\n";
     
@@ -229,17 +229,17 @@ void FileManager::handleUserChoice(int choice) {
 
 void FileManager::moveFile() {
 
-   std::string source = getFilePath("Enter source file path: ");
+ std::string source = getFilePath("Enter source file path: ");
     
-    std::string destination = getFilePath("Enter destination file path: ");
+ std::string destination = getFilePath("Enter destination file path: ");
     
-    try {
+ try {
     
-     std::filesystem::rename(source, destination);
+    std::filesystem::rename(source, destination);
         
-     std::cout << "File moved successfully.\n";
+    std::cout << "File moved successfully.\n";
         
-     logOperation("Move", source + " -> " + destination); // Log after success
+    logOperation("Move", source + " -> " + destination); // Log after success
     
     } catch (const std::filesystem::filesystem_error &e) {
     
@@ -463,23 +463,23 @@ void FileManager::logOperation(const std::string &operation, const std::string &
 
 int main() {
 
-    FileManager fm;
+ FileManager fm;
     
-    int choice = 0;
+ int choice = 0;
     
-    while (choice != 7) {
+ while (choice != 7) {
     
-        fm.displayMenu();
+     fm.displayMenu();
         
-        std::cout << "Enter your choice: ";
+     std::cout << "Enter your choice: ";
         
-        std::cin >> choice;
+     std::cin >> choice;
         
-        fm.handleUserChoice(choice);
+     fm.handleUserChoice(choice);
     
     }
     
-    return 0;
+ return 0;
 
 }
 
