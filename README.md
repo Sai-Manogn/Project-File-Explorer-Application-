@@ -222,7 +222,7 @@ void FileManager::handleUserChoice(int choice) {
     
    case 7: std::cout << "Exit\n"; break;
     
-    default: std::cout << "Invalid choice. Please try again.\n";
+   default: std::cout << "Invalid choice. Please try again.\n";
     
     }
 }
@@ -235,15 +235,15 @@ void FileManager::moveFile() {
     
  try {
     
-    std::filesystem::rename(source, destination);
+  std::filesystem::rename(source, destination);
         
-    std::cout << "File moved successfully.\n";
+  std::cout << "File moved successfully.\n";
         
-    logOperation("Move", source + " -> " + destination); // Log after success
+   logOperation("Move", source + " -> " + destination); // Log after success
     
-    } catch (const std::filesystem::filesystem_error &e) {
+ } catch (const std::filesystem::filesystem_error &e) {
     
-      std::cerr << "Error moving file: " << e.what() << '\n';
+   std::cerr << "Error moving file: " << e.what() << '\n';
     
     }
 
@@ -254,18 +254,18 @@ void FileManager::copyFile() {
  std::string source = getFilePath("Enter source file path: ");
     
  std::string destination = getFilePath("Enter destination file path: ");
+ 
+ try {
     
-    try {
-    
-      std::filesystem::copy(source, destination);
+  std::filesystem::copy(source, destination);
         
-      std::cout << "File copied successfully.\n";
+   std::cout << "File copied successfully.\n";
         
-       logOperation("Copy", source + " -> " + destination); // Log after success
+    logOperation("Copy", source + " -> " + destination); // Log after success
     
-    } catch (const std::filesystem::filesystem_error &e) {
+  } catch (const std::filesystem::filesystem_error &e) {
     
-     std::cerr << "Error copying file: " << e.what() << '\n';
+    std::cerr << "Error copying file: " << e.what() << '\n';
     
     }
 
@@ -469,15 +469,15 @@ int main() {
     
  while (choice != 7) {
     
-     fm.displayMenu();
+    fm.displayMenu();
         
-     std::cout << "Enter your choice: ";
+    std::cout << "Enter your choice: ";
         
-     std::cin >> choice;
+    std::cin >> choice;
         
-     fm.handleUserChoice(choice);
+    fm.handleUserChoice(choice);
     
-    }
+ }
     
  return 0;
 
