@@ -139,9 +139,9 @@ public:
 
 private:
     
-    void moveFile();
+void moveFile();
      
-    void copyFile();
+void copyFile();
     
     void deleteFile();
     
