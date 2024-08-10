@@ -345,11 +345,11 @@ void FileManager::managePermissions() {
         
  std::filesystem::permissions(filePath,
         
-     std::filesystem::perms::owner_all | 
+ std::filesystem::perms::owner_all | 
                                      
-     std::filesystem::perms::group_all | 
+ std::filesystem::perms::group_all | 
                                      
-     std::filesystem::perms::others_all);
+ std::filesystem::perms::others_all);
         
  std::cout << "Permissions modified successfully.\n";
         
