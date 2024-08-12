@@ -7,13 +7,21 @@ This File Explorer Application is a versatile tool designed to manage files and 
 
 # Table of Contents
 •Installation
+
 •Key Features
+
 •Architecture
+
 •Usage 
+
   *Code
+  
   *Sample Run
+
 •Contributing
+
 •License
+
 •References
 
 
