@@ -31,7 +31,7 @@ This File Explorer Application is a versatile tool designed to manage files and 
 
 bash
 
-git clone https://github.com/yourusername/file-explorer.git
+git clone 
 
 2.**Navigate to the Project Directory:**
 
