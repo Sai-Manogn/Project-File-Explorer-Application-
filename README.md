@@ -6,7 +6,7 @@ This File Explorer Application is a versatile tool designed to manage files and 
 
 
 # Table of Contents
-•Installation
+•Installation(#installation)
 
 •Key Features
 
