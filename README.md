@@ -6,23 +6,15 @@ This File Explorer Application is a versatile tool designed to manage files and 
 
 
 # Table of Contents
-•[Installation](#installation)
-
-•Key Features
-
-•Architecture
-
-•Usage 
-
-  *Code
-  
-  *Sample Run
-
-•Contributing
-
-•License
-
-•References
+1. [Installation](#introduction)
+2. [Key Features](#Key-Features)
+3. [Architecture](#Architecture)
+4. [Usage](#Usage)
+       -[code](#code)
+        -[Sample Run](#Sample-Run)
+5. [Contributing](#Contributing)
+6. [License](#license)
+7. [References](#References)
 
 
 # Installation
